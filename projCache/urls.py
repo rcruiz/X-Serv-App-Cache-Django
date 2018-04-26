@@ -14,11 +14,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from .cache import views
+from cache import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^(.*)$',views.buscar, name='Cache')
-    # Recurso /tb va a un tercero
-    # url(r'^$',views.barra, name='barra')
+    url(r'^(.+)$',views.buscar, name='Cache'),
+    url(r'^$',views.hola, name='barra')
 ]

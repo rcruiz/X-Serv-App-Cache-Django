@@ -68,7 +68,7 @@ TEMPLATES = [
         },
     },
 ]
-cache
+
 WSGI_APPLICATION = 'projCache.wsgi.application'
 
 
